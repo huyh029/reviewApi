@@ -51,15 +51,15 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-// CORS cho Angular
+// CORS mở cho mọi origin (cân nhắc thu hẹp khi cần)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularApp", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
-              .AllowAnyMethod()
-              .AllowAnyHeader()
-              .AllowCredentials();
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
     });
 });
 
@@ -140,7 +140,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAngularApp");
+app.UseCors("AllowAll");
 app.UseExceptionHandler(config =>
 {
     config.Run(async context =>
