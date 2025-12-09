@@ -19,7 +19,7 @@ namespace reviewApi.Controllers
         {
             _iUnitOfWork = iUnitOfWork;
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Setup()
         {
