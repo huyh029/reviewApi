@@ -1,0 +1,1150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\evaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\evaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\criteriasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\criteriasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251209035448_ud10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251209035448_ud10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\evaluation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\evaluationflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\evaluationflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\ievaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\ievaluationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\evaluationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\evaluationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208230236_ud9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251208230236_ud9.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\criteriasetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\criteriasetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\evaluationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\evaluationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\evaluationflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\evaluationflowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\evaluationflowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\evaluationflowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\ievaluationflowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\ievaluationflowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\icriteriasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\icriteriasetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\criteriasetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\criteriasetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\dowloadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\dowloadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\.nuget\\packages\\epplus\\8.3.1\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\evaluationobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\evaluationobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\ievaluationobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\ievaluationobjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\evaluationobjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\evaluationobjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\criteriaset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\criteriaset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\evaluationobjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\evaluationobjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\reportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\reportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\evaluationflowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\evaluationflowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\repositories\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\repositories\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206055020_ud4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206055020_ud4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:dto\\authdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:service\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\controllers\\setupdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:controllers\\setupdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\evaluationobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\evaluationobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\0e599f47268ea62b9af937dc43e1103c8accf8988ef11d1cec2bae5c647caaf7\\TaskAwaiter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019021459_ud12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019020921_ud12.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\757e52b7bf068cdd9710e7c7f6c3f9e2f218c42b9d3fe0583a50e5abf6cc1595\\ControllerActionInvoker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\3dc8b5cf9f14c4a8fdbf2aaf763e859a50ee271f90e4a049969530e07eefbc8d\\ExceptionHandlerMiddlewareImpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\31ec67c5e161f1ab64e6e4f6966466bc53731cc6f575d2bf3b2d3a6f7a3cd2e1\\AuthenticationMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\d56a9a0d366ec38047eb2ecc5e91ad0417a4c268bf1e7ac3110bb8f2dad4646f\\AuthorizationMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\033c449a9460883073bdec5314a1eb7e5e7f3ba7948a91166233eef3ec3e4bf7\\ResourceInvoker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251111032243_ud16.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251028012634_ud15.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020032352_ud14.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020031150_ud13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251019022110_reviewdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251207120855_u5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251207120855_u5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206063927_ud5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206063927_ud5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206052223_ud3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206052223_ud3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206050250_ud2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206050250_ud2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206044734_ud1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206044734_ud1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251206042335_review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251206042335_review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251208173626_id8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251208173626_id8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251208082050_ud8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251208082050_ud8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251208032958_ud7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251208032958_ud7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|c:\\users\\msi gaming\\desktop\\reviewweb\\reviewapi1\\migrations\\20251208031434_ud6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4017044-3058-44F0-8F88-A23E73886B43}|reviewApi.csproj|solutionrelative:migrations\\20251208031434_ud6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T07:03:21.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Evaluation.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Evaluation.cs",
+              "RelativeDocumentMoniker": "Models\\Evaluation.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Evaluation.cs",
+              "RelativeToolTip": "Models\\Evaluation.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wBgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:24:56.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EvaluationService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\EvaluationService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationService.cs",
+              "RelativeToolTip": "Service\\Repositories\\EvaluationService.cs",
+              "ViewState": "AgIAAGYCAAAAAAAAAAAYwAACAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:21:52.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CriteriaSetController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\CriteriaSetController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CriteriaSetController.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\CriteriaSetController.cs",
+              "RelativeToolTip": "Controllers\\CriteriaSetController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwv00AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T02:17:31.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EvaluationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EvaluationDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationDTO.cs",
+              "RelativeToolTip": "DTO\\EvaluationDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:33:22.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CriteriaSetService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\CriteriaSetService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\CriteriaSetService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\CriteriaSetService.cs",
+              "RelativeToolTip": "Service\\Repositories\\CriteriaSetService.cs",
+              "ViewState": "AgIAAGkDAAAAAAAAAAAqwHcDAADAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T01:56:44.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\Controller.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\Controller.cs",
+              "RelativeToolTip": "Controllers\\Controller.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAYwDYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:51:35.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\Service.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\Service.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\Service.cs*",
+              "RelativeToolTip": "Service\\Repositories\\Service.cs*",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwBwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:40:14.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EvaluationController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EvaluationController.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationController.cs",
+              "RelativeToolTip": "Controllers\\EvaluationController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA1wBkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T08:25:54.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20251209035448_ud10.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251209035448_ud10.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251209035448_ud10.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251209035448_ud10.cs",
+              "RelativeToolTip": "Migrations\\20251209035448_ud10.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T03:54:48.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEvaluationService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationService.cs",
+              "RelativeDocumentMoniker": "Service\\IEvaluationService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationService.cs",
+              "RelativeToolTip": "Service\\IEvaluationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T07:21:36.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EvaluationFlow.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\EvaluationFlow.cs",
+              "RelativeDocumentMoniker": "Models\\EvaluationFlow.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\EvaluationFlow.cs",
+              "RelativeToolTip": "Models\\EvaluationFlow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:26:19.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EvaluationFlowController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationFlowController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EvaluationFlowController.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationFlowController.cs",
+              "RelativeToolTip": "Controllers\\EvaluationFlowController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAA1wDQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T08:44:51.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\DTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\DTO.cs",
+              "RelativeToolTip": "DTO\\DTO.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:36:17.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20251208230236_ud9.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208230236_ud9.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251208230236_ud9.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208230236_ud9.cs",
+              "RelativeToolTip": "Migrations\\20251208230236_ud9.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T23:02:36.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IService.cs",
+              "RelativeDocumentMoniker": "Service\\IService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IService.cs",
+              "RelativeToolTip": "Service\\IService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:38:44.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "20251208173626_id8.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208173626_id8.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251208173626_id8.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208173626_id8.cs",
+              "RelativeToolTip": "Migrations\\20251208173626_id8.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T17:36:26.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IEvaluationFlowService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationFlowService.cs",
+              "RelativeDocumentMoniker": "Service\\IEvaluationFlowService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationFlowService.cs",
+              "RelativeToolTip": "Service\\IEvaluationFlowService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA4wAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T08:34:49.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Service\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswBcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T02:11:19.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CriteriaSetDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\CriteriaSetDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\CriteriaSetDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\CriteriaSetDTO.cs",
+              "RelativeToolTip": "DTO\\CriteriaSetDTO.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA/wCYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T01:59:41.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\.nuget\\packages\\epplus\\8.3.1\\readme.txt",
+              "RelativeDocumentMoniker": "..\\..\\..\\.nuget\\packages\\epplus\\8.3.1\\readme.txt",
+              "ToolTip": "C:\\Users\\MSI Gaming\\.nuget\\packages\\epplus\\8.3.1\\readme.txt",
+              "RelativeToolTip": "..\\..\\..\\.nuget\\packages\\epplus\\8.3.1\\readme.txt",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-12-08T12:25:51.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EvaluationObjectController.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationObjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EvaluationObjectController.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\EvaluationObjectController.cs",
+              "RelativeToolTip": "Controllers\\EvaluationObjectController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T10:54:45.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EvaluationFlowService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationFlowService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\EvaluationFlowService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationFlowService.cs",
+              "RelativeToolTip": "Service\\Repositories\\EvaluationFlowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T08:35:01.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ICriteriaSetService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\ICriteriaSetService.cs",
+              "RelativeDocumentMoniker": "Service\\ICriteriaSetService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\ICriteriaSetService.cs",
+              "RelativeToolTip": "Service\\ICriteriaSetService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAMwAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T01:56:36.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Service\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IGenericRepository.cs",
+              "RelativeToolTip": "Service\\IGenericRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswA0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T02:12:11.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T07:31:58.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DowloadService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\DowloadService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\DowloadService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\DowloadService.cs",
+              "RelativeToolTip": "Service\\Repositories\\DowloadService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAUwFEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T12:53:44.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IEvaluationObjectService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationObjectService.cs",
+              "RelativeDocumentMoniker": "Service\\IEvaluationObjectService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IEvaluationObjectService.cs",
+              "RelativeToolTip": "Service\\IEvaluationObjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T07:20:21.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EvaluationObjectService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationObjectService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\EvaluationObjectService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\EvaluationObjectService.cs",
+              "RelativeToolTip": "Service\\Repositories\\EvaluationObjectService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAYwBEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T07:20:39.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Service\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAuwFYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:17:13.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Service\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IUnitOfWork.cs",
+              "RelativeToolTip": "Service\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAUwAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:17:43.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\AuthService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\AuthService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\AuthService.cs",
+              "RelativeToolTip": "Service\\Repositories\\AuthService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwC0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:43:27.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "20251208082050_ud8.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208082050_ud8.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251208082050_ud8.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208082050_ud8.cs",
+              "RelativeToolTip": "Migrations\\20251208082050_ud8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T08:20:50.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\AppDbContext.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAUwK8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:24:50.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CriteriaSet.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\CriteriaSet.cs",
+              "RelativeDocumentMoniker": "Models\\CriteriaSet.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\CriteriaSet.cs",
+              "RelativeToolTip": "Models\\CriteriaSet.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAIA2wCgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T05:03:42.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EvaluationObjectDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationObjectDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EvaluationObjectDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationObjectDTO.cs",
+              "RelativeToolTip": "DTO\\EvaluationObjectDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T07:21:56.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\ReportService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\ReportService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\ReportService.cs",
+              "RelativeToolTip": "Service\\Repositories\\ReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T06:58:01.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ReportDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\ReportDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ReportDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\ReportDTO.cs",
+              "RelativeToolTip": "DTO\\ReportDTO.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T06:58:49.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EvaluationFlowDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationFlowDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EvaluationFlowDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\EvaluationFlowDTO.cs",
+              "RelativeToolTip": "DTO\\EvaluationFlowDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T08:37:03.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\IReportService.cs",
+              "RelativeDocumentMoniker": "Service\\Repositories\\IReportService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\Repositories\\IReportService.cs",
+              "RelativeToolTip": "Service\\Repositories\\IReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T06:57:35.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "20251208032958_ud7.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208032958_ud7.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251208032958_ud7.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208032958_ud7.cs",
+              "RelativeToolTip": "Migrations\\20251208032958_ud7.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T03:29:58.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "20251208031434_ud6.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208031434_ud6.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251208031434_ud6.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251208031434_ud6.cs",
+              "RelativeToolTip": "Migrations\\20251208031434_ud6.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T03:14:35.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20251206055020_ud4.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206055020_ud4.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206055020_ud4.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206055020_ud4.cs",
+              "RelativeToolTip": "Migrations\\20251206055020_ud4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T05:50:20.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "AuthDTO.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\AuthDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\AuthDTO.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\DTO\\AuthDTO.cs",
+              "RelativeToolTip": "DTO\\AuthDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:46:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "20251207120855_u5.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251207120855_u5.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251207120855_u5.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251207120855_u5.cs",
+              "RelativeToolTip": "Migrations\\20251207120855_u5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T12:08:56.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Service\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Service\\IAuthService.cs",
+              "RelativeToolTip": "Service\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:44:06.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Models\\Department.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Department.cs",
+              "RelativeToolTip": "Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:11:02.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:09:00.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Setupdb.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\Setupdb.cs",
+              "RelativeDocumentMoniker": "Controllers\\Setupdb.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Controllers\\Setupdb.cs",
+              "RelativeToolTip": "Controllers\\Setupdb.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAswHIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:27:21.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EvaluationObject.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\EvaluationObject.cs",
+              "RelativeDocumentMoniker": "Models\\EvaluationObject.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\EvaluationObject.cs",
+              "RelativeToolTip": "Models\\EvaluationObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:27:38.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:11:11.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "20251206063927_ud5.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206063927_ud5.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206063927_ud5.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206063927_ud5.cs",
+              "RelativeToolTip": "Migrations\\20251206063927_ud5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T06:39:27.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "20251206052223_ud3.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206052223_ud3.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206052223_ud3.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206052223_ud3.cs",
+              "RelativeToolTip": "Migrations\\20251206052223_ud3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T05:22:23.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20251206050250_ud2.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206050250_ud2.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206050250_ud2.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206050250_ud2.cs",
+              "RelativeToolTip": "Migrations\\20251206050250_ud2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T05:02:50.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "20251206044734_ud1.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206044734_ud1.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206044734_ud1.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206044734_ud1.cs",
+              "RelativeToolTip": "Migrations\\20251206044734_ud1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:47:34.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "20251206042335_review.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206042335_review.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251206042335_review.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi1\\Migrations\\20251206042335_review.cs",
+              "RelativeToolTip": "Migrations\\20251206042335_review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T04:23:35.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "20251111032243_ud16.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251111032243_ud16.cs",
+              "RelativeDocumentMoniker": "..\\reviewApi\\Migrations\\20251111032243_ud16.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251111032243_ud16.cs",
+              "RelativeToolTip": "..\\reviewApi\\Migrations\\20251111032243_ud16.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-11T03:22:43.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20251028012634_ud15.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251028012634_ud15.cs",
+              "RelativeDocumentMoniker": "..\\reviewApi\\Migrations\\20251028012634_ud15.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251028012634_ud15.cs",
+              "RelativeToolTip": "..\\reviewApi\\Migrations\\20251028012634_ud15.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T01:26:34.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TaskAwaiter.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\0e599f47268ea62b9af937dc43e1103c8accf8988ef11d1cec2bae5c647caaf7\\TaskAwaiter.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0e599f47268ea62b9af937dc43e1103c8accf8988ef11d1cec2bae5c647caaf7\\TaskAwaiter.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\0e599f47268ea62b9af937dc43e1103c8accf8988ef11d1cec2bae5c647caaf7\\TaskAwaiter.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\0e599f47268ea62b9af937dc43e1103c8accf8988ef11d1cec2bae5c647caaf7\\TaskAwaiter.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T03:48:11.139Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "20251020032352_ud14.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020032352_ud14.cs",
+              "RelativeDocumentMoniker": "..\\reviewApi\\Migrations\\20251020032352_ud14.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020032352_ud14.cs",
+              "RelativeToolTip": "..\\reviewApi\\Migrations\\20251020032352_ud14.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T03:23:52.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "20251020031150_ud13.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020031150_ud13.cs",
+              "RelativeDocumentMoniker": "..\\reviewApi\\Migrations\\20251020031150_ud13.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251020031150_ud13.cs",
+              "RelativeToolTip": "..\\reviewApi\\Migrations\\20251020031150_ud13.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T03:11:50.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "20251019020921_ud12.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019020921_ud12.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\reviewApi\\Migrations\\20251019020921_ud12.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019020921_ud12.cs",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\reviewApi\\Migrations\\20251019020921_ud12.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T02:09:21.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "20251019021459_ud12.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019021459_ud12.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\source\\repos\\reviewApi\\Migrations\\20251019021459_ud12.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\source\\repos\\reviewApi\\Migrations\\20251019021459_ud12.cs",
+              "RelativeToolTip": "..\\..\\..\\source\\repos\\reviewApi\\Migrations\\20251019021459_ud12.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T02:14:59.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "20251019022110_reviewdb.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251019022110_reviewdb.cs",
+              "RelativeDocumentMoniker": "..\\reviewApi\\Migrations\\20251019022110_reviewdb.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\Desktop\\reviewWeb\\reviewApi\\Migrations\\20251019022110_reviewdb.cs",
+              "RelativeToolTip": "..\\reviewApi\\Migrations\\20251019022110_reviewdb.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T02:21:10.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ActionMethodExecutor.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\1cc6d2a634203e0de348b5980fee97b87977d5074b436e24ff974f8438968be4\\ActionMethodExecutor.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:11.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ResourceInvoker.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\033c449a9460883073bdec5314a1eb7e5e7f3ba7948a91166233eef3ec3e4bf7\\ResourceInvoker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\033c449a9460883073bdec5314a1eb7e5e7f3ba7948a91166233eef3ec3e4bf7\\ResourceInvoker.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\033c449a9460883073bdec5314a1eb7e5e7f3ba7948a91166233eef3ec3e4bf7\\ResourceInvoker.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\033c449a9460883073bdec5314a1eb7e5e7f3ba7948a91166233eef3ec3e4bf7\\ResourceInvoker.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:23.415Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AuthorizationMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\d56a9a0d366ec38047eb2ecc5e91ad0417a4c268bf1e7ac3110bb8f2dad4646f\\AuthorizationMiddleware.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\d56a9a0d366ec38047eb2ecc5e91ad0417a4c268bf1e7ac3110bb8f2dad4646f\\AuthorizationMiddleware.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\d56a9a0d366ec38047eb2ecc5e91ad0417a4c268bf1e7ac3110bb8f2dad4646f\\AuthorizationMiddleware.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\d56a9a0d366ec38047eb2ecc5e91ad0417a4c268bf1e7ac3110bb8f2dad4646f\\AuthorizationMiddleware.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:25.081Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AuthenticationMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\31ec67c5e161f1ab64e6e4f6966466bc53731cc6f575d2bf3b2d3a6f7a3cd2e1\\AuthenticationMiddleware.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\31ec67c5e161f1ab64e6e4f6966466bc53731cc6f575d2bf3b2d3a6f7a3cd2e1\\AuthenticationMiddleware.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\31ec67c5e161f1ab64e6e4f6966466bc53731cc6f575d2bf3b2d3a6f7a3cd2e1\\AuthenticationMiddleware.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\31ec67c5e161f1ab64e6e4f6966466bc53731cc6f575d2bf3b2d3a6f7a3cd2e1\\AuthenticationMiddleware.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:25.629Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ExceptionHandlerMiddlewareImpl.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\3dc8b5cf9f14c4a8fdbf2aaf763e859a50ee271f90e4a049969530e07eefbc8d\\ExceptionHandlerMiddlewareImpl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3dc8b5cf9f14c4a8fdbf2aaf763e859a50ee271f90e4a049969530e07eefbc8d\\ExceptionHandlerMiddlewareImpl.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\3dc8b5cf9f14c4a8fdbf2aaf763e859a50ee271f90e4a049969530e07eefbc8d\\ExceptionHandlerMiddlewareImpl.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\3dc8b5cf9f14c4a8fdbf2aaf763e859a50ee271f90e4a049969530e07eefbc8d\\ExceptionHandlerMiddlewareImpl.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:26.546Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ControllerActionInvoker.cs",
+              "DocumentMoniker": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\757e52b7bf068cdd9710e7c7f6c3f9e2f218c42b9d3fe0583a50e5abf6cc1595\\ControllerActionInvoker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\757e52b7bf068cdd9710e7c7f6c3f9e2f218c42b9d3fe0583a50e5abf6cc1595\\ControllerActionInvoker.cs",
+              "ToolTip": "C:\\Users\\MSI Gaming\\AppData\\Local\\Temp\\.vsdbgsrc\\757e52b7bf068cdd9710e7c7f6c3f9e2f218c42b9d3fe0583a50e5abf6cc1595\\ControllerActionInvoker.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\757e52b7bf068cdd9710e7c7f6c3f9e2f218c42b9d3fe0583a50e5abf6cc1595\\ControllerActionInvoker.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T08:35:17.545Z",
+              "EditorCaption": " [Read Only]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
