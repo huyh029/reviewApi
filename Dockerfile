@@ -1,18 +1,24 @@
-# Build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+# Single-stage image (SDK) so we can run EF migrations at startup
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
+WORKDIR /app
+
+# Install dotnet-ef tool for migrations
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
 
 COPY . .
 RUN dotnet restore
-RUN dotnet publish -c Release -o /app
+RUN dotnet publish -c Release -o /out
 
-# Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
+WORKDIR /out
 
-COPY --from=build /app .
-
-EXPOSE 8080
+# Default connection string (override with env on deployment, e.g. DATABASE_URL)
+ENV ConnectionStrings__DefaultConnection="Host=postgres;Port=5432;Database=reviewdb;Username=postgres;Password=postgres"
 ENV ASPNETCORE_URLS=http://+:8080
 
-CMD ["dotnet", "reviewApi.dll"]
+EXPOSE 8080
+
+COPY entrypoint.sh /out/entrypoint.sh
+RUN chmod +x /out/entrypoint.sh
+
+ENTRYPOINT ["/out/entrypoint.sh"]
