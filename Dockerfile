@@ -13,7 +13,7 @@ RUN dotnet publish -c Release -o /out
 WORKDIR /out
 
 # Default connection string (override with env on deployment, e.g. DATABASE_URL)
-ENV ConnectionStrings__DefaultConnection="Host=postgres;Port=5432;Database=reviewdb;Username=postgres;Password=postgres"
+ENV ConnectionStrings__DefaultConnection="postgresql://huyh0_user:WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz@dpg-d4ruumi4d50c73b4jt60-a/huyh0"
 ENV ASPNETCORE_URLS=http://+:8080
 
 EXPOSE 8080
