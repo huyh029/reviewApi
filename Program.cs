@@ -80,38 +80,17 @@ string BuildConnectionString()
     if (raw.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) ||
         raw.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
     {
-        if (!Uri.TryCreate(raw, UriKind.Absolute, out var uri))
+        // Không kiểm tra chặt chẽ; để Npgsql tự xử lý URL đặc biệt
+        try
         {
-            // Thử parse bằng builder trong trường hợp URL có ký tự lạ nhưng vẫn hợp lệ với Npgsql
-            try
-            {
-                var fallbackBuilder = new Npgsql.NpgsqlConnectionStringBuilder(raw);
-                return fallbackBuilder.ConnectionString;
-            }
-            catch
-            {
-                throw new Exception("Invalid DATABASE_URL format.");
-            }
+            var csBuilder = new Npgsql.NpgsqlConnectionStringBuilder(raw);
+            return csBuilder.ConnectionString;
         }
-
-        var userInfo = uri.UserInfo.Split(':', 2);
-        var user = userInfo.Length > 0 ? Uri.UnescapeDataString(userInfo[0]) : string.Empty;
-        var pass = userInfo.Length > 1 ? Uri.UnescapeDataString(userInfo[1]) : string.Empty;
-        var db = uri.AbsolutePath.Trim('/');
-        var port = uri.Port > 0 ? uri.Port : 5432;
-
-        var csBuilder = new Npgsql.NpgsqlConnectionStringBuilder
+        catch
         {
-            Host = uri.Host,
-            Port = port,
-            Username = user,
-            Password = pass,
-            Database = db,
-            SslMode = Npgsql.SslMode.Require,
-            TrustServerCertificate = true
-        };
-
-        return csBuilder.ConnectionString;
+            // Nếu builder không parse được thì trả lại nguyên bản
+            return raw;
+        }
     }
 
     return raw;
