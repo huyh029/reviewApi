@@ -172,8 +172,21 @@ namespace reviewApi.Models
             // EvaluationScore - Criteria
             modelBuilder.Entity<EvaluationScore>()
                .HasOne(i => i.Criteria)
-                .WithMany(f => f.EvaluationScores)
+               .WithMany(f => f.EvaluationScores)
                 .HasForeignKey(i => i.CriteriaId);
+
+            // EvaluationChat relationships - avoid multiple cascade paths
+            modelBuilder.Entity<EvaluationChat>()
+                .HasOne(c => c.Sender)
+                .WithMany(u => u.EvaluationChats)
+                .HasForeignKey(c => c.SenderId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<EvaluationChat>()
+                .HasOne(c => c.ReplyToChat)
+                .WithMany()
+                .HasForeignKey(c => c.ReplyToChatId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

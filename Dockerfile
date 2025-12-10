@@ -2,8 +2,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
 WORKDIR /app
 
-# Install dotnet-ef tool for migrations (match SDK/runtime 9.x)
-RUN dotnet tool install --global dotnet-ef --version 9.0.8
+# Install dotnet-ef tool for migrations (match SDK/runtime 8.x)
+RUN dotnet tool install --global dotnet-ef --version 8.0.8
 ENV PATH="$PATH:/root/.dotnet/tools"
 
 COPY . .

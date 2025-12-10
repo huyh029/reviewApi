@@ -64,8 +64,11 @@ builder.Services.AddCors(options =>
 });
 
 // DB PostgreSQL
+// DB MySQL
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddTransient<IEvaluationService, EvaluationService>();

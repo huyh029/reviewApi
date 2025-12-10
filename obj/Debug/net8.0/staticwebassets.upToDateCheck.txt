@@ -1,6 +1,1 @@
-wwwroot\uploads\chat\bf28c4d4-0af0-42d5-8e41-b8109a46e433_chữ ký.jpg
-wwwroot\uploads\chat\64d7da14-f126-411b-9c07-694acc4967d4_kết quả nghiên cứu.docx
-wwwroot\uploads\chat\7e6588e6-bf72-46ab-ba5f-504ea6846ebc_mat sau CCCD.jpg
-wwwroot\uploads\chat\9f87aed7-bf73-4279-a860-0b508b3cee42_KỊCH BẢN GAME CHI TIẾT.docx
-wwwroot\uploads\chat\06fd749a-320d-49e4-9a4e-1ce88f2718f3_noteProject3.docx
-wwwroot\uploads\chat\8480bf24-4eec-4bc1-97b1-4fe277f507be_temp.txt
+wwwroot\uploads\chat\e7838f9a-3009-4642-b3ba-f8ba27ce6548_Danh-sach-danh-gia-self.pdf
