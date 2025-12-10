@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
@@ -63,32 +63,48 @@ builder.Services.AddCors(options =>
     });
 });
 
-// DB PostgreSQL with URL support
-string BuildConnectionString(IConfiguration config)
+// DB PostgreSQL với URL (chỉ đọc từ biến môi trường)
+string BuildConnectionString()
 {
-    var raw = config.GetConnectionString("DefaultConnection") ?? Environment.GetEnvironmentVariable("DATABASE_URL");
-    if (string.IsNullOrWhiteSpace(raw)) throw new Exception("Missing database connection string");
+    var raw = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
+              ?? Environment.GetEnvironmentVariable("DATABASE_URL")
+              ?? Environment.GetEnvironmentVariable("DEFAULT_DATABASE_URL");
 
-    if (raw.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) || raw.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
+    if (string.IsNullOrWhiteSpace(raw))
+        throw new Exception("Missing database connection string. Set ConnectionStrings__DefaultConnection or DATABASE_URL.");
+
+    raw = raw.Trim();
+
+    if (raw.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) ||
+        raw.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
     {
-        var uri = new Uri(raw);
+        if (!Uri.TryCreate(raw, UriKind.Absolute, out var uri))
+            throw new Exception("Invalid DATABASE_URL format.");
+
         var userInfo = uri.UserInfo.Split(':', 2);
-        var builder = new Npgsql.NpgsqlConnectionStringBuilder
+        var user = userInfo.Length > 0 ? Uri.UnescapeDataString(userInfo[0]) : string.Empty;
+        var pass = userInfo.Length > 1 ? Uri.UnescapeDataString(userInfo[1]) : string.Empty;
+        var db = uri.AbsolutePath.Trim('/');
+        var port = uri.Port > 0 ? uri.Port : 5432;
+
+        var csBuilder = new Npgsql.NpgsqlConnectionStringBuilder
         {
             Host = uri.Host,
-            Port = uri.Port > 0 ? uri.Port : 5432,
-            Username = userInfo.Length > 0 ? userInfo[0] : "",
-            Password = userInfo.Length > 1 ? userInfo[1] : "",
-            Database = uri.AbsolutePath.Trim('/'),
+            Port = port,
+            Username = user,
+            Password = pass,
+            Database = db,
             SslMode = Npgsql.SslMode.Require,
             TrustServerCertificate = true
         };
-        return builder.ConnectionString;
+
+        return csBuilder.ConnectionString;
     }
+
     return raw;
 }
 
-var connectionString = BuildConnectionString(builder.Configuration);
+var connectionString = BuildConnectionString();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
@@ -112,9 +128,15 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        var key = builder.Configuration["JwtSettings:Key"];
+        string GetJwtSetting(string key) =>
+            Environment.GetEnvironmentVariable($"JwtSettings__{key}") ?? string.Empty;
+
+        var key = GetJwtSetting("Key");
         if (string.IsNullOrWhiteSpace(key))
-            throw new Exception("JWT secret key is missing or empty!");
+            throw new Exception("JWT secret key is missing or empty! Set JwtSettings__Key environment variable.");
+
+        var issuer = GetJwtSetting("Issuer");
+        var audience = GetJwtSetting("Audience");
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -123,8 +145,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             ClockSkew = TimeSpan.Zero, // bỏ 5 phút grace mặc định
-            ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
-            ValidAudience = builder.Configuration["JwtSettings:Audience"],
+            ValidIssuer = issuer,
+            ValidAudience = audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
         };
 
