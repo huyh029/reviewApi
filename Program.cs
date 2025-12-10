@@ -68,7 +68,9 @@ string BuildConnectionString()
 {
     var raw = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
               ?? Environment.GetEnvironmentVariable("DATABASE_URL")
-              ?? Environment.GetEnvironmentVariable("DEFAULT_DATABASE_URL");
+              ?? Environment.GetEnvironmentVariable("DEFAULT_DATABASE_URL")
+              // Fallback hard-coded for testing/deploy (replace if needed)
+              ?? "postgresql://huyh0_user:WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz@dpg-d4ruumi4d50c73b4jt60-a.virginia-postgres.render.com:5432/huyh0";
 
     if (string.IsNullOrWhiteSpace(raw))
         throw new Exception("Missing database connection string. Set ConnectionStrings__DefaultConnection or DATABASE_URL.");
@@ -79,7 +81,18 @@ string BuildConnectionString()
         raw.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
     {
         if (!Uri.TryCreate(raw, UriKind.Absolute, out var uri))
-            throw new Exception("Invalid DATABASE_URL format.");
+        {
+            // Thử parse bằng builder trong trường hợp URL có ký tự lạ nhưng vẫn hợp lệ với Npgsql
+            try
+            {
+                var fallbackBuilder = new Npgsql.NpgsqlConnectionStringBuilder(raw);
+                return fallbackBuilder.ConnectionString;
+            }
+            catch
+            {
+                throw new Exception("Invalid DATABASE_URL format.");
+            }
+        }
 
         var userInfo = uri.UserInfo.Split(':', 2);
         var user = userInfo.Length > 0 ? Uri.UnescapeDataString(userInfo[0]) : string.Empty;
