@@ -63,40 +63,8 @@ builder.Services.AddCors(options =>
     });
 });
 
-// DB PostgreSQL với URL (chỉ đọc từ biến môi trường)
-string BuildConnectionString()
-{
-    var raw = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
-              ?? Environment.GetEnvironmentVariable("DATABASE_URL")
-              ?? Environment.GetEnvironmentVariable("DEFAULT_DATABASE_URL")
-              // Fallback hard-coded for testing/deploy (replace if needed)
-              ?? "postgresql://huyh0_user:WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz@dpg-d4ruumi4d50c73b4jt60-a.virginia-postgres.render.com:5432/huyh0";
-
-    if (string.IsNullOrWhiteSpace(raw))
-        throw new Exception("Missing database connection string. Set ConnectionStrings__DefaultConnection or DATABASE_URL.");
-
-    raw = raw.Trim();
-
-    if (raw.StartsWith("postgres://", StringComparison.OrdinalIgnoreCase) ||
-        raw.StartsWith("postgresql://", StringComparison.OrdinalIgnoreCase))
-    {
-        // Không kiểm tra chặt chẽ; để Npgsql tự xử lý URL đặc biệt
-        try
-        {
-            var csBuilder = new Npgsql.NpgsqlConnectionStringBuilder(raw);
-            return csBuilder.ConnectionString;
-        }
-        catch
-        {
-            // Nếu builder không parse được thì trả lại nguyên bản
-            return raw;
-        }
-    }
-
-    return raw;
-}
-
-var connectionString = BuildConnectionString();
+// DB PostgreSQL: dùng trực tiếp connection string cố định (không đọc environment)
+var connectionString = "Host=dpg-d4ruumi4d50c73b4jt60-a.virginia-postgres.render.com;Port=5432;Database=huyh0;Username=huyh0_user;Password=WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz;SslMode=Require;TrustServerCertificate=true";
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
@@ -120,15 +88,10 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        string GetJwtSetting(string key) =>
-            Environment.GetEnvironmentVariable($"JwtSettings__{key}") ?? string.Empty;
-
-        var key = GetJwtSetting("Key");
-        if (string.IsNullOrWhiteSpace(key))
-            throw new Exception("JWT secret key is missing or empty! Set JwtSettings__Key environment variable.");
-
-        var issuer = GetJwtSetting("Issuer");
-        var audience = GetJwtSetting("Audience");
+        // Fixed JWT settings (không đọc environment)
+        var key = "supersecretkey1234567890abcdefxyz!";
+        var issuer = "uerManage";
+        var audience = "uerManage";
 
         options.TokenValidationParameters = new TokenValidationParameters
         {
