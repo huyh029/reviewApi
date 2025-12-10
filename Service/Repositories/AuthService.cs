@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using reviewApi.DTO;
 using reviewApi.Models;
@@ -80,8 +80,12 @@ namespace reviewApi.Service.Repositories
         }
         public string GenerateJwtToken(int userId,string name,string role, string department)
         {
-            var jwtSettings = _config.GetSection("JwtSettings");
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
+            // Fixed JWT settings to khớp với cấu hình trong Program.cs
+            const string jwtKey = "supersecretkey1234567890abcdefxyz!";
+            const string jwtIssuer = "uerManage";
+            const string jwtAudience = "uerManage";
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
@@ -94,8 +98,8 @@ namespace reviewApi.Service.Repositories
         };
 
             var token = new JwtSecurityToken(
-                issuer: jwtSettings["Issuer"],
-                audience: jwtSettings["Audience"],
+                issuer: jwtIssuer,
+                audience: jwtAudience,
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(30),
                 signingCredentials: creds
