@@ -20,7 +20,7 @@ namespace reviewApi.Service.Repositories
             IEnumerable<EvaluationObject> EvaluationObjects;
             if(search!=null) search = search.ToLower();
             if (string.IsNullOrEmpty(search))
-                EvaluationObjects = _iUnitOfWork.EvaluationObject.GetAll();
+                EvaluationObjects = _iUnitOfWork.EvaluationObject.Find(e => true);
             else
                 EvaluationObjects = _iUnitOfWork.EvaluationObject
                     .Find(e => e.Code.ToLower().Contains(search)
@@ -81,9 +81,11 @@ namespace reviewApi.Service.Repositories
         }
         public async Task<List<DepartmentNodeDTO>> getEvaluationObjectTree(string? search)
         {
-            _iUnitOfWork.EvaluationObjectRole.GetAll();
-            _iUnitOfWork.User.GetAll();
-            var all = _iUnitOfWork.Department.GetAll();
+            var allRoles = _iUnitOfWork.EvaluationObjectRole.Find(r => true).ToList();
+            var userIds = allRoles.Select(r => r.UserId).Distinct().ToList();
+            var users = _iUnitOfWork.User.Find(u => userIds.Contains(u.Id)).ToList();
+            var deptCodes = users.Select(u => u.DepartmentCode).Where(c => !string.IsNullOrEmpty(c)).Distinct().ToList();
+            var all = _iUnitOfWork.Department.Find(d => deptCodes.Contains(d.Code) || deptCodes.Contains(d.ParentCode ?? "") || d.ParentCode == null).ToList();
 
             var roots = all.Where(x => x.ParentCode == null).ToList();
             var result = roots.Select(r => MapToNodeDTO(r)).ToList();
@@ -162,7 +164,9 @@ namespace reviewApi.Service.Repositories
 
         public async Task putRolesInEvaluationObject(List<assigmentDTO> assignments)
         {
-            _iUnitOfWork.EvaluationObjectRole.RemoveRange(_iUnitOfWork.EvaluationObjectRole.GetAll());
+            var existing = _iUnitOfWork.EvaluationObjectRole.Find(r => true).ToList();
+            if (existing.Any())
+                _iUnitOfWork.EvaluationObjectRole.RemoveRange(existing);
             var roles = assignments
                 .SelectMany(a => a.selectedObjectIds.Select(code => new EvaluationObjectRole
                 {

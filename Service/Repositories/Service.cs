@@ -11,7 +11,7 @@ namespace reviewApi.Service.Repositories
         }
         public async Task<List<DepartmentDTO>> getDepartments()
         {
-            var all = _iUnitOfWork.Department.GetAll();
+            var all = _iUnitOfWork.Department.Find(d => true).ToList();
             var roots = all.Where(x => x.ParentCode == null).ToList();
             var result = roots.Select(r => MapToNodeDTO(r)).ToList();
             return result!;
@@ -19,7 +19,7 @@ namespace reviewApi.Service.Repositories
 
         public async Task<List<RoleDTO>> getRoles()
         {
-            return _iUnitOfWork.Role.GetAll().Select(r => new RoleDTO
+            return _iUnitOfWork.Role.Find(r => true).Select(r => new RoleDTO
             {
                 code = r.Code,
                 name = r.Name
@@ -30,11 +30,6 @@ namespace reviewApi.Service.Repositories
             var currentUserId = _iUnitOfWork.userId ?? 0;
             var currentDept = _iUnitOfWork.department;
             if (currentUserId == 0 || string.IsNullOrEmpty(currentDept)) return new List<UserDTO>();
-
-            _iUnitOfWork.Role.GetAll();
-            _iUnitOfWork.EvaluationFlowRole.GetAll();
-            _iUnitOfWork.EvaluationFlowDepartment.GetAll();
-            _iUnitOfWork.EvaluationObject.GetAll();
 
             var activeObjectCodes = _iUnitOfWork.EvaluationObject
                 .Find(o => o.Status != null && o.Status.ToLower() == "active")
@@ -63,10 +58,10 @@ namespace reviewApi.Service.Repositories
                 .ToList();
 
             // 2. Đối tượng đánh giá đang được dùng trong các bộ tiêu chí
-            var criteriaObjects = _iUnitOfWork.CriteriaSetObject.GetAll()
+            var criteriaObjects = _iUnitOfWork.CriteriaSetObject
+                .Find(c => activeObjectCodes.Contains(c.EvaluationObjectCode))
                 .Select(c => c.EvaluationObjectCode)
                 .Distinct()
-                .Where(code => activeObjectCodes.Contains(code))
                 .ToList();
             var activeUserObjects = userObjectCodes.Intersect(criteriaObjects).ToList();
             if (!activeUserObjects.Any()) return new List<UserDTO>();
@@ -109,7 +104,8 @@ namespace reviewApi.Service.Repositories
             if (!descendantRoles.Any()) return new List<UserDTO>();
 
             // 6. Lọc user theo role nằm trong descendantRoles
-            var roleMap = _iUnitOfWork.Role.GetAll().ToDictionary(r => r.Code, r => r.Name);
+            var roleCodes = usersSameDept.Select(u => u.RoleCode).Where(c => !string.IsNullOrEmpty(c)).Distinct().ToList();
+            var roleMap = _iUnitOfWork.Role.Find(r => roleCodes.Contains(r.Code)).ToDictionary(r => r.Code, r => r.Name);
             var managers = usersSameDept
                 .Where(u => !string.IsNullOrEmpty(u.RoleCode) && descendantRoles.Contains(u.RoleCode))
                 .Select(u => new UserDTO

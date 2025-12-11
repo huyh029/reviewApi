@@ -46,6 +46,16 @@ namespace reviewApi.Service.Repositories
             return _context.Set<T>().ToList();
         }
 
+        public IEnumerable<T> GetPaged(int skip, int take, Expression<Func<T, bool>> expression = null)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            if (expression != null)
+            {
+                query = query.Where(expression);
+            }
+            return query.Skip(skip).Take(take).ToList();
+        }
+
         public T GetById(object id)
         {
             return _context.Set<T>().Find(id);
@@ -80,6 +90,16 @@ namespace reviewApi.Service.Repositories
             // Dùng EF.Property để lọc theo key thật
             return query.FirstOrDefault(e =>
                 EF.Property<object>(e, keyProperty.Name).Equals(id));
+        }
+
+        public int Count(Expression<Func<T, bool>> expression = null)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            if (expression != null)
+            {
+                query = query.Where(expression);
+            }
+            return query.Count();
         }
 
     }

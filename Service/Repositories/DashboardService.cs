@@ -13,7 +13,7 @@ namespace reviewApi.Service.Repositories
 
         public async Task<DashboardStatsDTO> GetStats()
         {
-            var evaluations = _iUnitOfWork.Evaluation.GetAll().ToList();
+            var evaluations = _iUnitOfWork.Evaluation.Find(e => true).ToList();
             var totalCompleted = evaluations.Count(e => string.Equals(e.Status, "Hoàn thành", StringComparison.OrdinalIgnoreCase));
             var pending = evaluations.Count(e =>
                 string.Equals(e.Status, "Chờ đánh giá", StringComparison.OrdinalIgnoreCase) ||
@@ -27,12 +27,12 @@ namespace reviewApi.Service.Repositories
 
         public async Task<DashboardFiltersDTO> GetFilters()
         {
-            var years = _iUnitOfWork.Evaluation.GetAll()
+            var years = _iUnitOfWork.Evaluation.Find(e => true)
                 .Select(e => e.PeriodYear)
                 .Distinct()
                 .OrderByDescending(y => y)
                 .ToList();
-            var criteria = _iUnitOfWork.CriteriaSet.GetAll().Select(c => new CriteriaFilterDTO
+            var criteria = _iUnitOfWork.CriteriaSet.Find(c => true).Select(c => new CriteriaFilterDTO
             {
                 id = c.Id,
                 name = c.Name
@@ -83,8 +83,9 @@ namespace reviewApi.Service.Repositories
                 };
             }
 
-            var scores = _iUnitOfWork.EvaluationScore.GetAll().ToList();
-            var criteria = _iUnitOfWork.Criteria.GetAll().Where(c => c.CriteriaSetId == criteriaId).ToList();
+            var evalIds = evals.Select(e => e.Id).ToList();
+            var scores = _iUnitOfWork.EvaluationScore.Find(s => evalIds.Contains(s.EvaluationId)).ToList();
+            var criteria = _iUnitOfWork.Criteria.Find(c => c.CriteriaSetId == criteriaId).ToList();
             var classifications = _iUnitOfWork.Classification.Find(c => c.CriteriaSetId == criteriaId).ToList();
 
             // Dictionary không chấp nhận key null, dùng -1 làm key cho root

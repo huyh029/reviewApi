@@ -2,6 +2,7 @@
 using OfficeOpenXml;
 using reviewApi.DTO;
 using reviewApi.Models;
+using System.Linq.Expressions;
 using System.Linq;
 
 namespace reviewApi.Service.Repositories
@@ -17,38 +18,47 @@ namespace reviewApi.Service.Repositories
         }
         public async Task<responseDTO<List<EvaluationFlowDTO>>> getEvaluationFlows(string? search,int page,int limit)
         {
-            IEnumerable<EvaluationFlow> EvaluationFlows;
             if (search != null) search = search.ToLower();
-            if (string.IsNullOrEmpty(search))
-                EvaluationFlows = _iUnitOfWork.EvaluationFlow.GetAll();
-            else
-                EvaluationFlows = _iUnitOfWork.EvaluationFlow
-                    .Find(e => e.Code.ToLower().Contains(search)
-                            || e.Name.ToLower().Contains(search));
+            Expression<Func<EvaluationFlow, bool>> filter = null;
+            if (!string.IsNullOrEmpty(search))
+            {
+                filter = e => e.Code.ToLower().Contains(search) || e.Name.ToLower().Contains(search);
+            }
 
+            var totalItems = _iUnitOfWork.EvaluationFlow.Count(filter);
             int startIndex = (page - 1) * limit;
-            _iUnitOfWork.EvaluationFlowDepartment.GetAll();
-            _iUnitOfWork.Department.GetAll();
-            var data = EvaluationFlows
-               .Skip(startIndex)
-               .Take(limit)
-               .Select((e, index) => new EvaluationFlowDTO
-               {
-                   code = e.Code,
-                   name = e.Name,
-                   status = e.Status,
-                   applicableDepartments = e.EvaluationFlowDepartments!=null?e.EvaluationFlowDepartments.Select(f => f.Department.Name).ToList():null,
-               })
-               .ToList();
+
+            var flowsPage = _iUnitOfWork.EvaluationFlow.GetPaged(startIndex, limit, filter).ToList();
+            var flowCodes = flowsPage.Select(f => f.Code).ToList();
+
+            var flowDepartments = _iUnitOfWork.EvaluationFlowDepartment
+                .Find(d => flowCodes.Contains(d.EvaluationFlowCode)).ToList();
+
+            var deptCodes = flowDepartments.Select(d => d.DepartmentCode).Distinct().ToList();
+            var departments = _iUnitOfWork.Department.Find(d => deptCodes.Contains(d.Code)).ToList();
+            var deptNameMap = departments.ToDictionary(d => d.Code, d => d.Name);
+
+            var data = flowsPage
+                .Select(e => new EvaluationFlowDTO
+                {
+                    code = e.Code,
+                    name = e.Name,
+                    status = e.Status,
+                    applicableDepartments = flowDepartments
+                        .Where(fd => fd.EvaluationFlowCode == e.Code)
+                        .Select(fd => deptNameMap.ContainsKey(fd.DepartmentCode) ? deptNameMap[fd.DepartmentCode] : fd.DepartmentCode)
+                        .ToList()
+                })
+                .ToList();
             return new responseDTO<List<EvaluationFlowDTO>>
             {
                 data = data,
                 pagination = new Pagination
                 {
                     currentPage = page,
-                    totalItems = EvaluationFlows.Count(),
+                    totalItems = totalItems,
                     itemsPerPage = limit,
-                    totalPages = (int)Math.Ceiling((double)EvaluationFlows.Count() / limit)
+                    totalPages = (int)Math.Ceiling((double)totalItems / limit)
                 }
             };
         }
@@ -56,36 +66,54 @@ namespace reviewApi.Service.Repositories
         {
             var e = _iUnitOfWork.EvaluationFlow.GetById(code);
             if (e == null) throw new Exception("Không tìm thấy quy trình đánh giá");
-            _iUnitOfWork.EvaluationFlowDepartment.GetAll();
-            _iUnitOfWork.EvaluationFlowRole.GetAll();
-            _iUnitOfWork.Role.GetAll();
+
+            var flowDepartments = _iUnitOfWork.EvaluationFlowDepartment
+                .Find(d => d.EvaluationFlowCode == code).ToList();
+            var deptCodes = flowDepartments.Select(d => d.DepartmentCode).Distinct().ToList();
+
+            var flowRoles = _iUnitOfWork.EvaluationFlowRole
+                .Find(r => r.EvaluationFlowCode == code).ToList();
+            var roleCodes = flowRoles.Select(r => r.RoleCode).Distinct().ToList();
+            var roles = _iUnitOfWork.Role.Find(r => roleCodes.Contains(r.Code)).ToList();
+            var roleNameMap = roles.ToDictionary(r => r.Code, r => r.Name);
+
+            var roleTree = BuildRoleTree(flowRoles, roleNameMap);
 
             return new EvaluationFlowDetailDTO
             {
                 code = e.Code,
                 name = e.Name,
                 status = e.Status,
-                applicableDepartments = e.EvaluationFlowDepartments != null ? e.EvaluationFlowDepartments.Select(f => f.DepartmentCode).ToList() : null,
-                roleHierarchy = e.EvaluationFlowRoles != null ? e.EvaluationFlowRoles
-                    .Where(r => r.ParentId == null)
-                    .Select(r => MapToNodeDTO(r))
-                    .ToList() : null
+                applicableDepartments = deptCodes,
+                roleHierarchy = roleTree
             };
         }
-        private RoleHierarchyNodeDTO MapToNodeDTO(EvaluationFlowRole d)
+        private List<RoleHierarchyNodeDTO> BuildRoleTree(List<EvaluationFlowRole> roles, Dictionary<string, string> roleNameMap)
         {
-            return new RoleHierarchyNodeDTO
+            var nodeMap = roles.ToDictionary(r => r.Id, r => new RoleHierarchyNodeDTO
             {
-                id = d.Id,
+                id = r.Id,
                 role = new RoleHierarchyDataNodeDTO
                 {
-                    code = d.RoleCode,
-                    name = d.Role.Name
+                    code = r.RoleCode,
+                    name = roleNameMap.ContainsKey(r.RoleCode) ? roleNameMap[r.RoleCode] : r.RoleCode
                 },
-                children = d.Child?
-                    .Select(c => MapToNodeDTO(c))
-                    .ToList()
-            };
+                children = new List<RoleHierarchyNodeDTO>()
+            });
+
+            var roots = new List<RoleHierarchyNodeDTO>();
+            foreach (var r in roles)
+            {
+                if (r.ParentId.HasValue && nodeMap.ContainsKey(r.ParentId.Value))
+                {
+                    nodeMap[r.ParentId.Value].children.Add(nodeMap[r.Id]);
+                }
+                else
+                {
+                    roots.Add(nodeMap[r.Id]);
+                }
+            }
+            return roots;
         }
         public async Task creatEvaluationFlow(EvaluationFlowDetailDTO payload)
         {
@@ -116,12 +144,12 @@ namespace reviewApi.Service.Repositories
                 EvaluationFlowCode = payload.code
             }).ToList() : [];
             var role = payload.roleHierarchy.Select(e => MapToModel(e,payload.code)).ToList();
-            _iUnitOfWork.EvaluationFlowRole.GetAll();
-            _iUnitOfWork.EvaluationFlowDepartment.GetAll();
-            if (en.EvaluationFlowRoles != null)
-                _iUnitOfWork.EvaluationFlowRole.RemoveRange(en.EvaluationFlowRoles);
-            if (en.EvaluationFlowDepartments != null)
-                _iUnitOfWork.EvaluationFlowDepartment.RemoveRange(en.EvaluationFlowDepartments);
+            var existingRoles = _iUnitOfWork.EvaluationFlowRole.Find(r => r.EvaluationFlowCode == payload.code).ToList();
+            var existingDepts = _iUnitOfWork.EvaluationFlowDepartment.Find(d => d.EvaluationFlowCode == payload.code).ToList();
+            if (existingRoles.Any())
+                _iUnitOfWork.EvaluationFlowRole.RemoveRange(existingRoles);
+            if (existingDepts.Any())
+                _iUnitOfWork.EvaluationFlowDepartment.RemoveRange(existingDepts);
             en.Name = payload.name;
             en.Status = payload.status;
             en.EvaluationFlowDepartments = evaluationDepartment;

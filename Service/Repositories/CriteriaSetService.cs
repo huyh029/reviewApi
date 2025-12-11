@@ -276,6 +276,7 @@ namespace reviewApi.Service.Repositories
         }
         public async Task creatCriteriaSets(CriteriaSetDTO payload)
         {
+            ClearIds(payload);
             if (_iUnitOfWork.CriteriaSet.FindFirst(f => f.Name.Trim() == payload.name.Trim()) != null) throw new Exception("Tên bộ tiêu chí đã tồn tại vui lòng chọn tên khác!");
 
             var applicableObjects = payload.applicableObjects ?? new List<string>();
@@ -336,6 +337,28 @@ namespace reviewApi.Service.Repositories
                 Children = node.children?.Select(c => MapToModel(c,e)).ToList()  
             };
         }
+        private void ClearIds(CriteriaSetDTO payload)
+        {
+            if (payload == null) return;
+            if (payload.criteriaTree != null)
+            {
+                void ResetNode(CriteriaNodeDTO node)
+                {
+                    node.id = null;
+                    if (node.children != null)
+                    {
+                        foreach (var child in node.children)
+                        {
+                            ResetNode(child);
+                        }
+                    }
+                }
+                foreach (var node in payload.criteriaTree)
+                {
+                    ResetNode(node);
+                }
+            }
+        }
         public async Task<CriteriaSetDTO> getById(int id) 
         {
             var e = _iUnitOfWork.CriteriaSet.GetById(id);
@@ -373,6 +396,7 @@ namespace reviewApi.Service.Repositories
 
         public async Task updateCriteriaSet(CriteriaSetDTO payload)
         {
+            ClearIds(payload);
             var e = _iUnitOfWork.CriteriaSet.GetById(payload.id);
             if (e == null) throw new Exception("Tiêu chí đánh giá này chưa tồn tại!");
             if (_iUnitOfWork.CriteriaSet.FindFirst(f => f.Name.Trim() == payload.name.Trim() && f.Id!=payload.id) != null) throw new Exception("Tên bộ tiêu chí đã tồn tại vui lòng chọn tên khác!");
@@ -397,14 +421,15 @@ namespace reviewApi.Service.Repositories
                     }
                 }
             }
-            _iUnitOfWork.CriteriaSetObject.GetAll();
-            _iUnitOfWork.CriteriaSetPeriod.GetAll();
-            _iUnitOfWork.Criteria.GetAll();
-            _iUnitOfWork.Classification.GetAll();
-            _iUnitOfWork.Classification.RemoveRange(e.Classifications);
-            _iUnitOfWork.Criteria.RemoveRange(e.Criterias);
-            _iUnitOfWork.CriteriaSetObject.RemoveRange(e.CriteriaSetObjects);
-            _iUnitOfWork.CriteriaSetPeriod.RemoveRange(e.CriteriaSetPeriods);
+            var existingClassifications = _iUnitOfWork.Classification.Find(c => c.CriteriaSetId == payload.id).ToList();
+            var existingCriteria = _iUnitOfWork.Criteria.Find(c => c.CriteriaSetId == payload.id).ToList();
+            var existingObjects = _iUnitOfWork.CriteriaSetObject.Find(c => c.CriteriaSetId == payload.id).ToList();
+            var existingPeriods = _iUnitOfWork.CriteriaSetPeriod.Find(c => c.CriteriaSetId == payload.id).ToList();
+
+            if (existingClassifications.Any()) _iUnitOfWork.Classification.RemoveRange(existingClassifications);
+            if (existingCriteria.Any()) _iUnitOfWork.Criteria.RemoveRange(existingCriteria);
+            if (existingObjects.Any()) _iUnitOfWork.CriteriaSetObject.RemoveRange(existingObjects);
+            if (existingPeriods.Any()) _iUnitOfWork.CriteriaSetPeriod.RemoveRange(existingPeriods);
             e.Name = payload.name;
             e.Classifications = payload.classificationLevels.Select(c => new Classification
             {
@@ -490,10 +515,14 @@ namespace reviewApi.Service.Repositories
         }
         public async Task<byte[]> ExportCriteriaSets(string format, string? search, string? _object, int? year, int? month)
         {
-            var criteriaSets = FilterCriteriaSets(search, _object, year, month);
-            _iUnitOfWork.CriteriaSetObject.GetAll();
-            _iUnitOfWork.CriteriaSetPeriod.GetAll();
-            var objectMap = _iUnitOfWork.EvaluationObject.GetAll().ToDictionary(o => o.Code, o => o.Name);
+            var criteriaSets = FilterCriteriaSets(search, _object, year, month).ToList();
+            var csIds = criteriaSets.Select(c => c.Id).ToList();
+
+            var csObjects = _iUnitOfWork.CriteriaSetObject.Find(o => csIds.Contains(o.CriteriaSetId)).ToList();
+            var csPeriods = _iUnitOfWork.CriteriaSetPeriod.Find(p => csIds.Contains(p.CriteriaSetId)).ToList();
+            var objCodes = csObjects.Select(o => o.EvaluationObjectCode).Distinct().ToList();
+            var objectMap = _iUnitOfWork.EvaluationObject.Find(o => objCodes.Contains(o.Code))
+                .ToDictionary(o => o.Code, o => o.Name);
             SetExportMetadata();
 
             var exportData = criteriaSets.Select(e => new CriteriaSetExportRow

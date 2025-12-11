@@ -50,10 +50,10 @@ namespace reviewApi.Service.Repositories
                 string? period,
                 int? year)
         {
-            var usersDict = _iUnitOfWork.User.GetAll().ToDictionary(u => u.Id, u => u);
-            var departmentsDict = _iUnitOfWork.Department.GetAll().ToDictionary(d => d.Code, d => d);
+            var usersDict = new Dictionary<int, User>();
+            var departmentsDict = new Dictionary<string, Department>();
 
-            var query = FilterEvaluations(tab, search, status, period, year, usersDict, departmentsDict);
+            var query = FilterEvaluations(tab, search, status, period, year, null, null);
 
             var draftTotalItems = tab == "self"
                 ? query.Where(ev => ev.Status == "Dự thảo").Count()
@@ -62,18 +62,24 @@ namespace reviewApi.Service.Repositories
             var evaluations = SortEvaluations(query);
             var skip = (page - 1) * limit;
 
-            var users = usersDict;
-            var departments = departmentsDict;
-            var allCriteria = _iUnitOfWork.Criteria.GetAll().ToList();
-            var allScores = _iUnitOfWork.EvaluationScore.GetAll().ToList();
+            var pageEvals = evaluations.Skip(skip).Take(limit).ToList();
 
-            var data = evaluations
-                .Skip(skip)
-                .Take(limit)
-                ?.Select(ev => new EvaluationDTO
+            var userIds = pageEvals.Select(ev => ev.UserId).Distinct().ToList();
+            usersDict = _iUnitOfWork.User.Find(u => userIds.Contains(u.Id)).ToDictionary(u => u.Id, u => u);
+
+            var deptCodes = usersDict.Values.Select(u => u.DepartmentCode).Where(c => !string.IsNullOrEmpty(c)).Distinct().ToList();
+            departmentsDict = _iUnitOfWork.Department.Find(d => deptCodes.Contains(d.Code)).ToDictionary(d => d.Code, d => d);
+
+            var criteriaSetIds = pageEvals.Select(ev => ev.CriteriaSetId).Distinct().ToList();
+            var allCriteria = _iUnitOfWork.Criteria.Find(c => criteriaSetIds.Contains(c.CriteriaSetId)).ToList();
+            var evalIds = pageEvals.Select(ev => ev.Id).ToList();
+            var allScores = _iUnitOfWork.EvaluationScore.Find(s => evalIds.Contains(s.EvaluationId)).ToList();
+
+            var data = pageEvals
+                .Select(ev => new EvaluationDTO
                 {
                     id = ev.Id,
-                    fullName = users.ContainsKey(ev.UserId) ? users[ev.UserId].FullName : ev?.User?.FullName,
+                    fullName = usersDict.ContainsKey(ev.UserId) ? usersDict[ev.UserId].FullName : ev?.User?.FullName,
                     status = ev.Status,
                     evaluationPeriod = $"Tháng {ev.PeriodMonth}/{ev.PeriodYear}",
                     statusColor = ev.Status == "completed" ? "green" :
@@ -82,8 +88,8 @@ namespace reviewApi.Service.Repositories
                     selfScore = CalculateScore(ev.Id, ev.CriteriaSetId, allCriteria, allScores, true),
                     managerScore = CalculateScore(ev.Id, ev.CriteriaSetId, allCriteria, allScores, false),
                     criteriaSetId = ev.CriteriaSetId,
-                    department = users.ContainsKey(ev.UserId) && departments.ContainsKey(users[ev.UserId].DepartmentCode)
-                        ? departments[users[ev.UserId].DepartmentCode].Name
+                    department = usersDict.ContainsKey(ev.UserId) && departmentsDict.ContainsKey(usersDict[ev.UserId].DepartmentCode)
+                        ? departmentsDict[usersDict[ev.UserId].DepartmentCode].Name
                         : ev?.User?.Department?.Name,
 
                 })
@@ -110,10 +116,10 @@ namespace reviewApi.Service.Repositories
             string? status,
             string? period,
             int? year,
-            Dictionary<int, User> usersDict,
-            Dictionary<string, Department> departmentsDict)
+            Dictionary<int, User>? usersDict,
+            Dictionary<string, Department>? departmentsDict)
         {
-            IEnumerable<Evaluation> query = _iUnitOfWork.Evaluation.GetAll();
+            IEnumerable<Evaluation> query = _iUnitOfWork.Evaluation.Find(e => true).ToList();
             int userId = _iUnitOfWork.userId ?? 0;
             switch (tab)
             {
@@ -141,8 +147,14 @@ namespace reviewApi.Service.Repositories
 
             if (!string.IsNullOrWhiteSpace(search))
             {
+                var list = query.ToList();
+                var userIds = list.Select(ev => ev.UserId).Distinct().ToList();
+                usersDict = _iUnitOfWork.User.Find(u => userIds.Contains(u.Id)).ToDictionary(u => u.Id, u => u);
+                var deptCodes = usersDict.Values.Select(u => u.DepartmentCode).Where(c => !string.IsNullOrEmpty(c)).Distinct().ToList();
+                departmentsDict = _iUnitOfWork.Department.Find(d => deptCodes.Contains(d.Code)).ToDictionary(d => d.Code, d => d);
+
                 var s = NormalizeString(search);
-                query = query.Where(ev =>
+                query = list.Where(ev =>
                 {
                     var fullName = usersDict.ContainsKey(ev.UserId) ? NormalizeString(usersDict[ev.UserId].FullName) : NormalizeString(ev.User?.FullName);
                     var departmentName = usersDict.ContainsKey(ev.UserId) && !string.IsNullOrEmpty(usersDict[ev.UserId].DepartmentCode)
@@ -168,7 +180,7 @@ namespace reviewApi.Service.Repositories
                 }
             }
 
-            return query;
+            return query.ToList();
         }
 
         private List<Evaluation> SortEvaluations(IEnumerable<Evaluation> query)
@@ -194,10 +206,18 @@ namespace reviewApi.Service.Repositories
         public async Task<byte[]> ExportEvaluations(string format, string tab, string? search, string? status, string? period, int? year)
         {
             SetExportMetadata(tab);
-            var usersDict = _iUnitOfWork.User.GetAll().ToDictionary(u => u.Id, u => u);
-            var departmentsDict = _iUnitOfWork.Department.GetAll().ToDictionary(d => d.Code, d => d);
-            var query = FilterEvaluations(tab, search, status, period, year, usersDict, departmentsDict);
+            var query = FilterEvaluations(tab, search, status, period, year, null, null);
             var evaluations = SortEvaluations(query);
+
+            var userIds = evaluations.Select(ev => ev.UserId).Distinct().ToList();
+            var usersDict = _iUnitOfWork.User.Find(u => userIds.Contains(u.Id)).ToDictionary(u => u.Id, u => u);
+            var deptCodes = usersDict.Values.Select(u => u.DepartmentCode).Where(c => !string.IsNullOrEmpty(c)).Distinct().ToList();
+            var departmentsDict = _iUnitOfWork.Department.Find(d => deptCodes.Contains(d.Code)).ToDictionary(d => d.Code, d => d);
+
+            var criteriaSetIds = evaluations.Select(ev => ev.CriteriaSetId).Distinct().ToList();
+            var allCriteria = _iUnitOfWork.Criteria.Find(c => criteriaSetIds.Contains(c.CriteriaSetId)).ToList();
+            var evalIds = evaluations.Select(ev => ev.Id).ToList();
+            var allScores = _iUnitOfWork.EvaluationScore.Find(s => evalIds.Contains(s.EvaluationId)).ToList();
 
             var exportRows = evaluations.Select((ev, index) => new
             {
@@ -207,8 +227,8 @@ namespace reviewApi.Service.Repositories
                     ? departmentsDict[usersDict[ev.UserId].DepartmentCode].Name
                     : ev.User?.Department?.Name,
                 KyDanhGia = $"Tháng {ev.PeriodMonth}/{ev.PeriodYear}",
-                DiemCaNhan = CalculateScore(ev.Id, ev.CriteriaSetId, _iUnitOfWork.Criteria.GetAll().ToList(), _iUnitOfWork.EvaluationScore.GetAll().ToList(), true),
-                DiemDonVi = CalculateScore(ev.Id, ev.CriteriaSetId, _iUnitOfWork.Criteria.GetAll().ToList(), _iUnitOfWork.EvaluationScore.GetAll().ToList(), false),
+                DiemCaNhan = CalculateScore(ev.Id, ev.CriteriaSetId, allCriteria, allScores, true),
+                DiemDonVi = CalculateScore(ev.Id, ev.CriteriaSetId, allCriteria, allScores, false),
                 TrangThai = ev.Status
             }).ToList();
 
@@ -580,8 +600,11 @@ namespace reviewApi.Service.Repositories
             if (ev == null) throw new Exception("Đánh giá không tồn tại");
             EnsureEvaluationAccess(ev);
 
-            _iUnitOfWork.User.GetAll();
-            _iUnitOfWork.Department.GetAll();
+            var user = _iUnitOfWork.User.GetById(ev.UserId);
+            var department = user != null
+                ? _iUnitOfWork.Department.Find(d => d.Code == user.DepartmentCode).FirstOrDefault()
+                : null;
+
             var criteriaAll = _iUnitOfWork.Criteria.Find(c => c.CriteriaSetId == ev.CriteriaSetId).ToList();
             var rootCriteriaIds = criteriaAll.Where(c => c.parentId == null).Select(c => c.Id).ToList();
 
@@ -599,8 +622,8 @@ namespace reviewApi.Service.Repositories
             return new TemplateDTO
             {
                 Id = ev.Id,
-                FullName = ev?.User?.FullName,
-                Department = ev?.User?.Department?.Name,
+                FullName = user?.FullName,
+                Department = department?.Name ?? user?.Department?.Name,
                 SelfScore = scores.Where(s => rootCriteriaIds.Contains(s.CriteriaId)).Sum(e => e.SelfScore ?? 0),
                 ManagerScore = scores.Where(s => rootCriteriaIds.Contains(s.CriteriaId)).Sum(e => e.ManagerScore ?? 0),
                 ManagerScores = managerScores,
@@ -1037,10 +1060,11 @@ namespace reviewApi.Service.Repositories
         {
             var ev = _iUnitOfWork.Evaluation.GetById(evaluationId);
             if (ev == null) throw new Exception("Đánh giá không tồn tại");
-            _iUnitOfWork.User.GetAll();
-            _iUnitOfWork.Department.GetAll();
-            _iUnitOfWork.EvaluationScore.GetAll();
-            _iUnitOfWork.Criteria.GetAll();
+
+            var user = _iUnitOfWork.User.GetById(ev.UserId);
+            var department = user != null
+                ? _iUnitOfWork.Department.Find(d => d.Code == user.DepartmentCode).FirstOrDefault()
+                : null;
 
             var criteriaIds = _iUnitOfWork.Criteria.Find(c => c.CriteriaSetId == ev.CriteriaSetId).Select(c => c.Id).ToList();
             var scores = _iUnitOfWork.EvaluationScore.Find(s => s.EvaluationId == evaluationId).ToList();
@@ -1063,9 +1087,9 @@ namespace reviewApi.Service.Repositories
             {
                 id = ev.Id,
                 criteriaSetId = ev.CriteriaSetId,
-                fullName = ev.User?.FullName,
+                fullName = user?.FullName ?? ev.User?.FullName,
                 evaluationPeriod = $"Tháng {ev.PeriodMonth}/{ev.PeriodYear}",
-                department = ev.User?.Department?.Name,
+                department = department?.Name ?? ev.User?.Department?.Name,
                 selfScore = selfScoreSum,
                 managerScore = managerScoreSum,
                 status = ev.Status,
@@ -1108,7 +1132,8 @@ namespace reviewApi.Service.Repositories
                 .ToList();
 
             var chatIds = chats.Select(c => c.Id).ToList();
-            var users = _iUnitOfWork.User.GetAll().ToDictionary(u => u.Id, u => u);
+            var senderIds = chats.Select(c => c.SenderId).Distinct().ToList();
+            var users = _iUnitOfWork.User.Find(u => senderIds.Contains(u.Id)).ToDictionary(u => u.Id, u => u);
             var files = _iUnitOfWork.EvaluationChatFile
                 .Find(f => chatIds.Contains(f.EvaluationChatId))
                 .GroupBy(f => f.EvaluationChatId)

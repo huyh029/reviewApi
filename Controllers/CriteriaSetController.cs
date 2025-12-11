@@ -33,6 +33,7 @@ namespace reviewApi.Controllers
 
             try
             {
+                if (payload == null) return BadRequest(new { message = "payload is required" });
                 await _iCriteriaSetService.creatCriteriaSets(payload);
                 return Ok(new { message = "Tạo mới tiêu chí đánh giá thành công!" });
             }
@@ -74,6 +75,7 @@ namespace reviewApi.Controllers
         {
             try
             {
+                if (payload == null) return BadRequest(new { message = "payload is required" });
                 payload.id = id;
                 await _iCriteriaSetService.updateCriteriaSet(payload);
                 return Ok(new { message = "Cập nhật tiêu chí đánh giá thành công!" });
