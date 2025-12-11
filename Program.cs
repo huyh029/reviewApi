@@ -70,7 +70,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 
 // DB PostgreSQL: dùng trực tiếp connection string cố định (không đọc environment)
-var connectionString = "Host=dpg-d4ruumi4d50c73b4jt60-a.virginia-postgres.render.com;Port=5432;Database=huyh0;Username=huyh0_user;Password=WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz;SslMode=Require;TrustServerCertificate=true";
+var connectionString = "postgresql://huyh0_user:WiPoRZzAnr4aeJNiDEqh2OMVEld6f4oz@dpg-d4ruumi4d50c73b4jt60-a/huyh0";
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
